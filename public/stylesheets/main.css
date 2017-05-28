@@ -1,11 +1,24 @@
-p.logo {
-  width: auto;
-  font-size: 24;
+nav {
+  display: inline-block;
+  width: 100%;
+  padding: 1em 0 10em 0;
+}
+
+.logo {
   font-weight: bold;
+  font-size: 24;
+  display: inline;
+}
+.logo a {
+  color: #000;
+}
+
+.logo a:hover {
+  color: #3ab795;
 }
 
 .links {
-  margin: 0 auto;
   float: right;
   word-spacing: 1em;
+  padding: .5em 0;
 }
