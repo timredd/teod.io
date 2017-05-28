@@ -1,0 +1,19 @@
+%link{:rel => "stylesheet", :href => "/stylesheets/casey.css"}
+%link{:rel => "stylesheet", :href => "/stylesheets/main.css"}
+-# %link{:rel => "stylesheet", :href => "/stylesheets/normalize.css"}
+
+%html
+  %head
+    %title teod.io
+  %body
+    %header
+      %nav
+        %p.logo teod.io
+        .links
+          %a{:href => "/amsterdam"} amsterdam
+          %a{:href => "/berlin"} berlin
+          %a{:href => "/copenhagen"} copenhagen
+          %a{:href => "/world"} world
+          %a{:href => "/essays"} essays
+          %a{:href => "/about"} about
+    = yield :content
