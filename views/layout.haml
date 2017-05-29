@@ -11,10 +11,14 @@
         .logo
           %a{:href => "/"} teod.io
         .links
-          %a{:href => "/amsterdam"} amsterdam
-          %a{:href => "/berlin"} berlin
-          %a{:href => "/copenhagen"} copenhagen
+          - @posts.each do |post|
+            %a{:href => "/#{post}"}= post
           %a{:href => "/world"} world
           %a{:href => "/essays"} essays
           %a{:href => "/about"} about
   = yield :content
+  %footer
+    .social
+      %a{:href => "https://twitter.com/tim.odonnell13"} twitter
+      %a{:href => "https://instagram.com/tim.mowthee"} instagram
+    %p © 2017

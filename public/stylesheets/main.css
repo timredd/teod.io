@@ -1,7 +1,11 @@
+header {
+  padding: 1em;
+  margin-top: 20px;
+}
+
 nav {
   display: inline-block;
   width: 100%;
-  padding: 1em 0 10em 0;
 }
 
 .logo {
@@ -20,5 +24,19 @@ nav {
 .links {
   float: right;
   word-spacing: 1em;
-  padding: .5em 0;
+  padding: .5em;
+}
+
+.post {
+  text-align: left;
+  padding: 1em;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+.social {
+  display: inline;
+  width: auto;
 }
