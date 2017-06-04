@@ -6,11 +6,12 @@ header {
 nav {
   display: inline-block;
   width: 100%;
+  padding: 1em;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 24;
+  font-size: 32;
   display: inline;
 }
 .logo a {
@@ -22,9 +23,14 @@ nav {
 }
 
 .links {
+  font-size: 13;
   float: right;
-  word-spacing: 1em;
+  word-spacing: 1.25em;
   padding: .5em;
+}
+
+main {
+  padding-top: 1em;
 }
 
 .post {
@@ -32,11 +38,33 @@ nav {
   padding: 1em;
 }
 
-footer {
-  margin-top: 2em;
+.post h1 {
+  text-align: center;
+  margin: 10px 0;
 }
 
-.social {
-  display: inline;
-  width: auto;
+.post p, li {
+  line-height: 1.2em;
+}
+
+ footer {
+
+ }
+
+.socially {
+  display: inline-block;
+  width: 100%;
+  padding: 1em;
+  word-spacing: 10em;
+}
+
+.socially a {
+  margin: 1em;
+  font-weight: bold;
+}
+
+footer p.blurb {
+  font-size: 11px;
+  padding: 0 2em;
+  margin-bottom: 0;
 }

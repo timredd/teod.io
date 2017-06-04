@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'glorify'
+# require 'glorify'
 require 'rdiscount'
 
 set :root, File.dirname(__FILE__)
