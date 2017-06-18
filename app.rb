@@ -1,37 +1,42 @@
-require 'sinatra'
-# require 'glorify'
+require 'sinatra/base'
 require 'rdiscount'
 
-set :root, File.dirname(__FILE__)
+class Teodio < Sinatra::Base
 
-def load_post(name)
-  File.open("./posts/#{name}.md", "rb").read
-end
+  set :root, File.dirname(__FILE__)
 
-before do
-  @posts = (Dir.entries('./posts') - ['.', '..']).map do |post|
-    File.basename(post, '.md')
+  helpers do
+    def load_post(name)
+      File.open("./posts/#{name}.md", "rb").read
+    end
   end
-end
 
-get '/' do
-  @post = load_post(@posts.first)
-  haml :post
-end
+  before do
+    @posts = (Dir.entries('./posts') - ['.', '..']).map do |post|
+      File.basename(post, '.md')
+    end
+  end
 
-get '/:place' do
-  @post = load_post(params[:place])
-  haml :post
-end
+  get '/' do
+    @post = load_post(@posts.first)
+    haml :post
+  end
 
-get '/world' do
-  haml :world
-end
+  get '/:place' do
+    @post = load_post(params[:place])
+    haml :post
+  end
 
-get '/essays' do
-  haml :essays
-end
+  get '/world' do
+    haml :world
+  end
 
-get '/about' do
-  haml :about
+  get '/essays' do
+    haml :essays
+  end
+
+  get '/about' do
+    haml :about
+  end
+
 end

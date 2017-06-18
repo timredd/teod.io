@@ -1,5 +1,3 @@
-require 'sinatra'
-
-require_relative 'app.rb'
+require File.dirname(__FILE__) + '/app'
 
 run Teodio
